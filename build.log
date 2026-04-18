@@ -1,0 +1,1844 @@
+/usr/bin/make -j1  O=/workspaces/home/buildroot/output HOSTCC="/usr/bin/gcc" HOSTCXX="/usr/bin/g++" syncconfig
+make[1]: warning: -j1 forced in submake: resetting jobserver mode.
+make[1]: Entering directory '/workspaces/home/buildroot'
+make[1]: Leaving directory '/workspaces/home/buildroot'
+[7m>>> stress-ng 0.20.00 Downloading[27m
+wget -nd -t 3 --connect-timeout=10 -O '/workspaces/home/buildroot/output/build/.stress-ng-0.20.00.tar.gz.0T7fo7/output' 'https://github.com/ColinIanKing/stress-ng/archive/V0.20.00/stress-ng-0.20.00.tar.gz' 
+--2026-04-15 15:07:36--  https://github.com/ColinIanKing/stress-ng/archive/V0.20.00/stress-ng-0.20.00.tar.gz
+Resolving github.com (github.com)... 140.82.113.4
+Connecting to github.com (github.com)|140.82.113.4|:443... connected.
+HTTP request sent, awaiting response... 302 Found
+Location: https://codeload.github.com/ColinIanKing/stress-ng/tar.gz/refs/tags/V0.20.00 [following]
+--2026-04-15 15:07:37--  https://codeload.github.com/ColinIanKing/stress-ng/tar.gz/refs/tags/V0.20.00
+Resolving codeload.github.com (codeload.github.com)... 140.82.114.10
+Connecting to codeload.github.com (codeload.github.com)|140.82.114.10|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: unspecified [application/x-gzip]
+Saving to: ‘/workspaces/home/buildroot/output/build/.stress-ng-0.20.00.tar.gz.0T7fo7/output’
+
+     0K .......... .......... .......... .......... .......... 19.4M
+    50K .......... .......... .......... .......... .......... 40.9M
+   100K .......... .......... .......... .......... .......... 39.6M
+   150K .......... .......... .......... .......... .......... 42.8M
+   200K .......... .......... .......... .......... .......... 50.9M
+   250K .......... .......... .......... .......... .......... 1.71M
+   300K .......... .......... .......... .......... .......... 40.1M
+   350K .......... .......... .......... .......... .......... 43.5M
+   400K .......... .......... .......... .......... .......... 70.0M
+   450K .......... .......... .......... .......... ..........  111M
+   500K .......... .......... .......... .......... .......... 3.54M
+   550K .......... .......... .......... .......... ..........  105M
+   600K .......... .......... .......... .......... ..........  125M
+   650K .......... .......... .......... .......... ..........  107M
+   700K .......... .......... .......... .......... ..........  142M
+   750K .......... .......... .......... .......... .......... 3.38M
+   800K .......... .......... .......... .......... .......... 68.7M
+   850K .......... .......... .......... .......... ..........  109M
+   900K .......... .......... .......... .......... ..........  110M
+   950K .......... .......... .......... .......... .......... 99.4M
+  1000K .......... .......... .......... .......... .......... 7.16M
+  1050K .......... .......... .......... .......... .......... 40.6M
+  1100K .......... .......... .......... .......... .......... 41.9M
+  1150K .......... .......... .......... .......... .......... 44.8M
+  1200K .......... .......... .......... .......... .......... 49.6M
+  1250K .......... .......... .......... .......... .......... 8.10M
+  1300K .......... .......... .......... .......... .......... 45.2M
+  1350K .......... .......... .......... .......... .......... 48.4M
+  1400K .......... .......... .......... .......... .......... 50.6M
+  1450K .......... .......... .......... .......... ..........  100M
+  1500K .......... .......... .......... .......... .......... 8.22M
+  1550K .......... .......... .......... .......... .......... 39.5M
+  1600K .......... .......... .......... .......... ..........  116M
+  1650K .......... .......... .......... .......... ..........  155M
+  1700K .......... .......... .......... .......... ..........  117M
+  1750K .......... .......... .......... .......... .......... 6.71M
+  1800K .......... .......... .......... .......... .......... 44.2M
+  1850K .......... .......... .......... .......... .......... 41.2M
+  1900K .......... .......... .......... .......... .......... 39.9M
+  1950K .......... .......... .......... .......... .......... 66.8M
+  2000K .......... .......... .......... .......... .......... 9.41M
+  2050K .......... .......... .......... .......... .......... 37.7M
+  2100K .......... .......... .......... .......... .......... 42.8M
+  2150K .......... .......... .......... .......... .......... 44.8M
+  2200K .......... .......... .......... .......... .......... 40.8M
+  2250K .......... .......... .......... .......... .......... 45.5M
+  2300K .......... .......... .......... .......... .......... 14.9M
+  2350K .......... .......... .......... .......... .......... 43.4M
+  2400K .......... .......... .......... .......... .......... 45.5M
+  2450K .......... .......... .......... .......... .......... 40.7M
+  2500K .......... .......... .......... .......... .......... 39.5M
+  2550K .......... .......... .......... .......... .......... 6.82M
+  2600K .......... .......... .......... .......... .......... 37.1M
+  2650K .......... .......... .......... .......... .......... 42.6M
+  2700K .......... .......... .......... .......... .......... 78.8M
+  2750K .......... .......... .......... .......... .......... 83.2M
+  2800K .......... .......... .......... .......... .......... 3.37M
+  2850K .......... .......... .......... .......... ..........  115M
+  2900K .......... .......... .......... .......... .......... 94.4M
+  2950K .......... .......... .......... .......... ..........  134M
+  3000K .......... .......... .......... .......... .......... 67.8M
+  3050K .......... .......... .......... .......... .......... 14.3M
+  3100K .......... .......... .......... .......... .......... 36.8M
+  3150K .......... .......... .......... .......... .......... 44.4M
+  3200K .......... .......... .......... .......... .......... 36.3M
+  3250K .......... .......... .......... .......... .......... 75.1M
+  3300K .......... .......... .......... .......... .......... 8.33M
+  3350K .......... .......... .......... .......... .......... 32.6M
+  3400K .......... .......... .......... .......... .......... 43.4M
+  3450K .......... .......... .......... .......... .......... 57.0M
+  3500K .......... .......... .......... .......... ..........  107M
+  3550K .......... .......... .......... .......... .......... 4.54M
+  3600K .......... .......... .......... .......... .......... 85.6M
+  3650K .......... .......... .......... .......... ..........  103M
+  3700K .......... .......... .......... .......... ..........  118M
+  3750K .......... .......... .......... .......... ..........  112M
+  3800K .......... .......... .......... .......... .......... 67.9M
+  3850K .......... .......... .......... .......... .......... 37.4M
+  3900K .......... .......... .......... .......... .......... 41.5M
+  3950K .......... .......... .......... .......... .......... 46.0M
+  4000K .......... .......... .......... .......... .......... 39.9M
+  4050K .......... .......... .......... .......... .......... 11.4M
+  4100K .......... .......... .......... .......... .......... 32.6M
+  4150K .......... .......... .......... .......... .......... 45.3M
+  4200K .......... .......... .......... .......... .......... 39.6M
+  4250K .......... .......... .......... .......... .......... 39.8M
+  4300K .......... .......... .......... .......... .......... 40.5M
+  4350K .......... .......... .......... .......... .......... 10.7M
+  4400K .......... .......... .......... .......... .......... 37.3M
+  4450K .......... .......... .......... .......... .......... 43.2M
+  4500K .......... .......... .......... .......... .......... 43.6M
+  4550K .......... .......... .......... .......... ..........  141M
+  4600K .......... .......... .......... .......... .......... 10.2M
+  4650K .......... .......... .......... .......... .......... 38.7M
+  4700K .......... .......... .......... .......... .......... 41.7M
+  4750K .......... .......... .......... .......... .......... 42.1M
+  4800K .......... .......... .......... .......... .......... 43.4M
+  4850K .......... .......... .......... .......... .......... 13.4M
+  4900K .......... .......... .......... .......... .......... 35.4M
+  4950K .......... .......... .......... .......... .......... 42.0M
+  5000K .......... .......... .......... .......... .......... 62.6M
+  5050K .......... .......... .......... .......... ..........  110M
+  5100K .......... .......... .......... .......... .......... 8.40M
+  5150K .......... .......... .......... .......... ..........  116M
+  5200K .......... .......... .......... .......... ..........  102M
+  5250K .......... .......... .......... .......... ..........  126M
+  5300K .......... .......... .......... .......... ..........  107M
+  5350K .......... .......... .......... .......... .......... 2.09M
+  5400K .......... .......... .......... .......... .......... 93.4M
+  5450K .......... .......... .......... .......... ..........  118M
+  5500K .......... .......... .......... .......... ..........  123M
+  5550K .......... .......... .......... .......... ..........  107M
+  5600K .......... .......... .......... .......... .......... 1.72M
+  5650K .......... .......... .......... .......... .......... 86.4M
+  5700K .......... .......... .......... .......... ..........  131M
+  5750K .......... .......... .......... .......... ..........  113M
+  5800K .......... .......... .......... .......... ..........  120M
+  5850K .......... .......... .......... .......... .......... 1.29M
+  5900K .......... .......... .......... .......... .......... 36.8M
+  5950K .......... .......... .......... .......... .......... 51.8M
+  6000K .......... .......... .......... .......... .......... 24.8M
+  6050K .......... .......... .......... .......... .......... 58.1M
+  6100K .......... .......... .......... .......... .......... 1.83M
+  6150K .......... .......... .......... .......... .......... 28.5M
+  6200K .......... .......... .......... .......... .......... 46.2M
+  6250K .......... .......... .......... .......... .......... 22.1M
+  6300K .......... .......... .......... .......... .......... 93.6M
+  6350K .......... .......... .......... .......... .......... 95.3M
+  6400K .......... .......... .......... .......... .......... 1.47M
+  6450K .......... .......... .......... .......... ..........  101M
+  6500K .......... .......... .......... .......... ..........  115M
+  6550K .......... .......... .......... .......... ..........  130M
+  6600K .......... .......... .......... .......... .......... 97.7M
+  6650K .......... .......... .......... .......... .......... 44.1M
+  6700K .......                                                4.29M=0.4s
+
+2026-04-15 15:07:37 (16.1 MB/s) - ‘/workspaces/home/buildroot/output/build/.stress-ng-0.20.00.tar.gz.0T7fo7/output’ saved [6868679]
+
+stress-ng-0.20.00.tar.gz: OK (sha256: fe9e5161ac186c6ada22963251ff701fe3275fac2c5b87bdb59c4cab08aaeaae)
+[7m>>> stress-ng 0.20.00 Extracting[27m
+gzip -d -c /workspaces/home/buildroot/dl/stress-ng/stress-ng-0.20.00.tar.gz | tar --strip-components=1 -C /workspaces/home/buildroot/output/build/stress-ng-0.20.00   -xf -
+[7m>>> stress-ng 0.20.00 Patching[27m
+[7m>>> stress-ng 0.20.00 Configuring[27m
+[7m>>> stress-ng 0.20.00 Building[27m
+GIT_DIR=. PATH="/workspaces/home/buildroot/output/host/bin:/workspaces/home/buildroot/output/host/sbin:/usr/local/rvm/gems/ruby-3.4.7/bin:/usr/local/rvm/gems/ruby-3.4.7@global/bin:/usr/local/rvm/rubies/ruby-3.4.7/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v24.11.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin" AR="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ar" AS="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-as" LD="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-ld" NM="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-nm" CC="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc" GCC="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc" CPP="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-cpp" CXX="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-g++" FC="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gfortran" F77="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gfortran" RANLIB="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ranlib" READELF="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-readelf" STRIP="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip" OBJCOPY="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-objcopy" OBJDUMP="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-objdump" AR_FOR_BUILD="/usr/bin/ar" AS_FOR_BUILD="/usr/bin/as" CC_FOR_BUILD="/usr/bin/gcc" GCC_FOR_BUILD="/usr/bin/gcc" CXX_FOR_BUILD="/usr/bin/g++" LD_FOR_BUILD="/usr/bin/ld" CPPFLAGS_FOR_BUILD="-I/workspaces/home/buildroot/output/host/include" CFLAGS_FOR_BUILD="-O2 -I/workspaces/home/buildroot/output/host/include" CXXFLAGS_FOR_BUILD="-O2 -I/workspaces/home/buildroot/output/host/include" LDFLAGS_FOR_BUILD="-L/workspaces/home/buildroot/output/host/lib -Wl,-rpath,/workspaces/home/buildroot/output/host/lib" FCFLAGS_FOR_BUILD="" DEFAULT_ASSEMBLER="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-as" DEFAULT_LINKER="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-ld" CPPFLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64" CFLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O2 -g0 -D_FORTIFY_SOURCE=1" CXXFLAGS="-D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O2 -g0 -D_FORTIFY_SOURCE=1" LDFLAGS="" FCFLAGS=" -O2 -g0" FFLAGS=" -O2 -g0" PKG_CONFIG="/workspaces/home/buildroot/output/host/bin/pkg-config" STAGING_DIR="/workspaces/home/buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot" INTLTOOL_PERL=/usr/bin/perl CXX=no /usr/bin/make  -C /workspaces/home/buildroot/output/build/stress-ng-0.20.00 PRESERVE_CFLAGS=1 LDFLAGS=" -latomic"
+make[1]: Entering directory '/workspaces/home/buildroot/output/build/stress-ng-0.20.00'
+make[1]: warning: jobserver unavailable: using -j1.  Add '+' to parent make rule.
+Compiler: gcc
+Generating config..
+/usr/bin/make CC="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc" CXX="no" STATIC= -f Makefile.config
+CFLAGS: -D_LARGEFILE_SOURCE -D_LARGEFILE64_SOURCE -D_FILE_OFFSET_BITS=64  -O2 -g0 -D_FORTIFY_SOURCE=1 -Wall -Wextra -DVERSION='0.20.00' -fipa-pta -fivopts -ftree-vectorize -ftree-slp-vectorize -fmodulo-sched  -std=gnu99
+fatal: not a git repository: '.'
+make[2]: Entering directory '/workspaces/home/buildroot/output/build/stress-ng-0.20.00'
+LDFLAGS: -latomic
+MK git-commit-id.h
+using -lacl ... no
+using -laio ... no
+using -lbsd ... no
+using -lcrypt ... no
+using -lapparmor ... no
+using -lEGL ... no
+using -lgbm ... no
+using -lgmp ... no
+using -ldl ... yes
+using -lGLESv2 ... no
+using -lIPSec_MB ... no
+using -ljpeg ... no
+using -lmd ... no
+using -lJudy ... no
+using -lkmod ... no
+using -lmpfr ... no
+using -lsctp ... no
+using -lxxhash ... no
+using -lpthread spinlock ... yes
+using -lz ... no
+using -llzma ... no
+using acl/libacl.h ... no
+using -lpthread ... yes
+using -lrt ... yes
+using asm/cachectl.h ... no
+using aio.h ... yes
+using asm/ldt.h ... no
+using asm/mtrr.h ... no
+using bsd/stdlib.h ... no
+using asm/prctl.h ... no
+using attr/xattr.h ... no
+using bsd/string.h ... no
+using bsd/wchar.h ... no
+using bsd/unistd.h ... no
+using bsd/sys/tree.h ... no
+using complex.h ... yes
+using crypt.h ... no
+using EGL/egl.h ... no
+using EGL/egl.h EGL/eglext.h ... no
+using features.h ... yes
+using float.h ... yes
+using gbm.h ... no
+using GLES2/gl2.h ... no
+using gmp.h ... no
+using execinfo.h ... yes
+using fenv.h ... yes
+using grp.h ... yes
+using intel-ipsec-mb.h ... no
+using ifaddrs.h ... yes
+using immintrin.h ... no
+using jpeglib.h ... no
+using Judy.h ... no
+using keyutils.h ... no
+using libgen.h ... yes
+using libkmod.h ... no
+using libaio.h ... no
+using link.h ... yes
+using linux/audit.h ... yes
+using linux/android/binderfs.h ... yes
+using linux/android/binder.h ... yes
+using linux/blkzoned.h ... yes
+using linux/btrfs.h ... yes
+using linux/auto_dev-ioctl.h ... yes
+using linux/cdrom.h ... yes
+using linux/cn_proc.h ... yes
+using linux/connector.h ... yes
+using linux/dm-ioctl.h ... yes
+using linux/fb.h ... yes
+using linux/fd.h ... yes
+using linux/fiemap.h ... yes
+using linux/filter.h ... yes
+using linux/fs.h ... yes
+using linux/futex.h ... yes
+using linux/fsverity.h ... yes
+using linux/genetlink.h ... yes
+using linux/hdreg.h ... yes
+using linux/hiddev.h ... yes
+using linux/hidraw.h ... yes
+using linux/hpet.h ... yes
+using linux/if_alg.h ... yes
+using linux/if_packet.h ... yes
+using linux/if_tun.h ... yes
+using linux/input.h ... yes
+using linux/io_uring.h ... yes
+using linux/kd.h ... yes
+using linux/kvm.h ... yes
+using linux/landlock.h ... yes
+using linux/loop.h ... yes
+using linux/lirc.h ... yes
+using linux/lsm.h ... yes
+using linux/magic.h ... yes
+using linux/media.h ... yes
+using linux/memfd.h ... yes
+using linux/membarrier.h ... yes
+using linux/mempolicy.h ... yes
+using linux/module.h ... yes
+using linux/netlink.h ... yes
+using linux/openat2.h ... yes
+using linux/pci.h ... yes
+using linux/posix_types.h ... yes
+using linux/perf_event.h ... yes
+using linux/ppdev.h ... yes
+using linux/ptp_clock.h ... yes
+using linux/rseq.h ... yes
+using linux/rtc.h ... yes
+using linux/random.h ... yes
+using linux/rtnetlink.h ... yes
+using linux/sched.h ... yes
+using linux/seccomp.h ... yes
+using linux/serial.h ... yes
+using linux/socket.h ... yes
+using linux/sockios.h ... yes
+using linux/sysctl.h ... yes
+using linux/taskstats.h ... yes
+using linux/udp.h ... yes
+using linux/sockdiag.h ... yes
+using linux/uinput.h ... yes
+using linux/unix_diag.h ... yes
+using linux/usbdevice_fs.h ... yes
+using linux/usb/cdc-wdm.h ... yes
+using linux/version.h ... yes
+using linux/userfaultfd.h ... yes
+using locale.h ... yes
+using linux/videodev2.h ... yes
+using linux/vt.h ... yes
+using linux/watchdog.h ... yes
+using lzma.h ... no
+using mach/vm_statistics.h ... no
+using mach/mach.h ... no
+using mach/machine.h ... no
+using malloc.h ... yes
+using mntent.h ... yes
+using mqueue.h ... yes
+using mpfr.h ... no
+using net/if.h ... yes
+using netinet/ip.h ... yes
+using netinet/sctp.h ... no
+using netinet/ip_icmp.h ... yes
+using netinet/tcp.h ... yes
+using netinet/udp.h ... yes
+using poll.h ... yes
+using pthread_np.h ... no
+using pthread.h ... yes
+using regex.h ... yes
+using scsi/scsi.h ... yes
+using scsi/scsi_ioctl.h ... yes
+using scsi/sg.h ... yes
+using search.h ... yes
+using semaphore.h ... yes
+using spawn.h ... yes
+using sound/asound.h ... yes
+using strings.h ... yes
+using sys/acl.h ... no
+using sys/apparmor.h ... no
+using sys/auxv.h ... yes
+using sys/syscall.h ... yes
+using sys/capability.h ... no
+using sys/eventfd.h ... yes
+using sys/epoll.h ... yes
+using sys/fanotify.h ... yes
+using sys/file.h ... yes
+using sys/fsuid.h ... yes
+using sys/io.h ... no
+using sys/inotify.h ... yes
+using sys/ipc.h ... yes
+using sys/loadavg.h ... no
+using syslog.h ... yes
+using sys/mkdev.h ... no
+using sys/mount.h ... yes
+using sys/msg.h ... yes
+using sys/personality.h ... yes
+using sys/param.h ... yes
+using sys/platform/ppc.h ... no
+using sys/pidfd.h ... yes
+using sys/prctl.h ... yes
+using sys/procctl.h ... no
+using sys/queue.h ... yes
+using sys/random.h ... yes
+using sys/quota.h ... yes
+using sys/rseq.h ... yes
+using sys/select.h ... yes
+using sys/shm.h ... yes
+using sys/sendfile.h ... yes
+using sys/signalfd.h ... yes
+using sys/statfs.h ... yes
+using sys/statvfs.h ... yes
+using sys/sysctl.h ... no
+using sys/sysinfo.h ... yes
+using sys/sysmacros.h ... yes
+using sys/swap.h ... yes
+using sys/timerfd.h ... yes
+using sys/tree.h ... no
+using sys/timex.h ... yes
+using sys/ucred.h ... no
+using sys/uio.h ... yes
+using sys/un.h ... yes
+using sys/utsname.h ... yes
+using sys/vfs.h ... yes
+using termio.h ... no
+using sys/vmmeter.h ... no
+using sys/xattr.h ... yes
+using termios.h ... yes
+using threads.h ... yes
+using ustat.h ... no
+using ucontext.h ... yes
+using utime.h ... yes
+using uvm/uvm_extern.h ... no
+using xmmintrin.h ... no
+using x86intrin.h ... no
+using wchar.h ... yes
+using xxhash.h ... no
+using ALPHA draina instruction ... no
+using ALPHA halt instruction ... no
+using 64K byte alignment attribute ... yes
+using 128 byte alignment attribute ... yes
+using 64 byte alignment attribute ... yes
+using ARM dmb sy instruction ... yes
+using hppa diag instruction ... no
+using ARM tlbi instruction ... yes
+using ARM yield instruction ... yes
+using hppa rfi instruction ... no
+using ARM prfm instruction ... yes
+using loong64 cpucfg instruction ... no
+using loong64 dbar instruction ... no
+using loong64 rdtime instruction ... no
+using loong64 tlbrd instruction ... no
+using M68K eori.w on sr instruction ... no
+using loong64 tlbsrch instruction ... no
+using MIPS wait instruction ... no
+using ppc64 darn instruction ... no
+using asm("") ... yes
+using ppc64 dcbst instruction ... no
+using memory barrier ... yes
+using generic nop instruction ... yes
+using ppc64 dcbtst instruction ... no
+using ppc64 dcbt instruction ... no
+using ppc64 msync instruction ... no
+using ppc64 icbi instruction ... no
+using ppc64 tlbie instruction ... no
+using ppc dcbt instruction ... no
+using ppc dcbst instruction ... no
+using ppc dcbtst instruction ... no
+using RISC-V fence.i instruction ... no
+using RISC-V fence instruction ... no
+using ppc icbi instruction ... no
+using RISC-V sfence.vma instruction ... no
+using s390 ptlb instruction ... no
+using SH4 rte instruction ... no
+using RISC-V cbo.zero instruction ... no
+using RISC-V cbom instructions ... no
+using SH4 sleep instruction ... no
+using SPARC membar instruction ... no
+using SPARC rdpr instruction ... no
+using SPARC tick instruction ... no
+using x86 cldemote instruction ... no
+using x86 clflush instruction ... no
+using x86 clts instruction ... no
+using x86 clflushopt instruction ... no
+using x86 hlt instruction ... no
+using x86 invd instruction ... no
+using x86 clwb instruction ... no
+using x86 invpg instruction ... no
+using x86 lahf instruction ... no
+using x86 lfence instruction ... no
+using x86 lgdt instruction ... no
+using x86 lldt instruction ... no
+using x86 lmsw instruction ... no
+using x86 mfence instruction ... no
+using x86 mov to cr0 instruction ... no
+using x86 mov to dr0 instruction ... no
+using x86 pause instruction ... no
+using x86 movdiri instruction ... no
+using x86 prefetchtnta instruction ... no
+using x86 prefetcht0 instruction ... no
+using x86 prefetcht1 instruction ... no
+using x86 prefetcht2 instruction ... no
+using x86 prefetchw instruction ... no
+using x86 prefetchwt1 instruction ... no
+using x86 rdmsr instruction ... no
+using x86 rdpmc instruction ... no
+using x86 rdrand instruction ... no
+using x86 rdseed instruction ... no
+using x86 rdtsc instruction ... no
+using x86 rep stosb instruction ... no
+using x86 rdtscp instruction ... no
+using x86 rep stosd instruction ... no
+using x86 rep stosq instruction ... no
+using x86 rep stosw instruction ... no
+using x86 sfence instruction ... no
+using x86 serialize instruction ... no
+using x86 tpause instruction ... no
+using x86 wrinvd instruction ... no
+using x86 wrmsr instruction ... no
+using __attribute__((always_inline)) ... yes
+using __attribute__((fast_math)) ... yes
+using __attribute__((const)) ... yes
+using __attribute__((noinline)) ... yes
+using __attribute__((packed)) ... yes
+using __attribute__((pure)) ... yes
+using __attribute__((noreturn)) ... yes
+using __attribute__((returns_nonnull)) ... yes
+using _mm256_add_epi8 intrinsic ... no
+using label as value feature ... yes
+using __attribute__((warn_unused_result)) ... yes
+using __attribute__((weak)) ... yes
+using _mm256_dpbusd_epi32 intrinsic ... no
+using _mm256_dpwssd_epi32 intrinsic ... no
+using _mm256_loadu_si256 intrinsic ... no
+using _mm256_storeu_si256 intrinsic ... no
+using _mm512_add_epi8 intrinsic ... no
+using _mm512_dpbusd_epi32 intrinsic ... no
+using _mm512_dpwssd_epi32 intrinsic ... no
+using _mm512_storeu_si512 intrinsic ... no
+using _mm512_loadu_si512 intrinsic ... no
+using _mm_add_epi8 intrinsic ... no
+using _mm_dpbusd_epi32 intrinsic ... no
+using _mm_dpwssd_epi32 intrinsic ... no
+using _mm_storeu_si128 intrinsic ... no
+using _mm_loadu_si128 intrinsic ... no
+using pragma gcc no-hard-dfp ... no
+using pragma inside functions ... yes
+using pragma push/pop ... yes
+using target_clones arch=alderlake attribute (x86) ... no
+using target_clones attribute ... no
+using target_clones arch=arrowlake attribute (x86) ... no
+using pragma gcc prefetch ... yes
+using target_clones avx attribute (x86) ... no
+using target_clones avx2 attribute (x86) ... no
+using __restrict keyword ... yes
+using target_clones arch=cooperlake attribute (x86) ... no
+using target_clones avxvnni attribute (x86) ... no
+using target_clones arch=diamondrapids attribute (x86) ... no
+using target_clones arch=graniterapids attribute (x86) ... no
+using target_clones mmx attribute (x86) ... no
+using target_clones arch=lunarlake attribute (x86) ... no
+using target_clones arch=pantherlake attribute (x86) ... no
+using target_clones cpu=power attribute (power9) ... no
+using target_clones cpu=power attribute (power10) ... no
+using target_clones cpu=power attribute (power11) ... no
+using target_clones arch=rocketlake attribute (x86) ... no
+using target_clones arch=skylake-avx512 attribute (x86) ... no
+using target_clones arch=sapphirerapids attribute (x86) ... no
+using target_clones sse attribute (x86) ... no
+using target_clones sse2 attribute (x86) ... no
+using target_clones sse3 attribute (x86) ... no
+using target_clones sse4_1 attribute (x86) ... no
+using target_clones sse4_2 attribute (x86) ... no
+using target_clones arch=tigerlake attribute (x86) ... no
+using target_clones ssse3 attribute (x86) ... no
+using target_clones arch=znver2 attribute (x86) ... no
+using target_clones arch=znver1 attribute (x86) ... no
+using target_clones arch=znver4 attribute (x86) ... no
+using target_clones arch=znver3 attribute (x86) ... no
+using target_clones arch=znver5 attribute (x86) ... no
+using variable length array function args ... yes
+using struct cdrom_blk ... yes
+using struct cdrom_mcn ... yes
+using __bf16 ... yes
+using struct cdrom_msf ... yes
+using struct cdrom_read_audio ... yes
+using struct cdrom_subchnl ... yes
+using struct cdrom_ti ... yes
+using struct cdrom_tocentry ... yes
+using struct cdrom_tochdr ... yes
+using struct cdrom_volctrl ... yes
+using complex ... yes
+using struct consolefontdesc ... yes
+using cpu_set_t ... yes
+using vector math ... yes
+using _Decimal128 ... no
+using _Decimal32 ... no
+using _Decimal64 ... no
+using daddr_t ... yes
+using struct dirent d_type ... yes
+using struct dm_ioctl ... yes
+using dvd_authinfo ... yes
+using dvd_struct ... yes
+using __float128 ... no
+using __fp16 ... yes
+using _Float32 ... yes
+using _Float64 ... yes
+using _Float128 ... yes
+using _Float128x ... no
+using _Float16 ... yes
+using __float80 ... no
+using _Float32x ... yes
+using _Float64x ... yes
+using _Float16x ... no
+using _Float80 ... no
+using _Float80x ... no
+using struct floppy_fdc_state ... yes
+using struct floppy_drive_struct ... yes
+using struct floppy_struct ... yes
+using struct floppy_write_errors ... yes
+using struct fs_sysfs_path ... yes
+using struct fsverity_digest ... yes
+using struct fsuuid2 ... yes
+using struct fsverity_enable_arg ... yes
+using __ibm128 ... no
+using struct fsxattr ... yes
+using struct iphdr and icmphdr ... yes
+using struct ifconf ... yes
+using struct ifreq ... yes
+using ino64_t ... yes
+using int128_t ... yes
+using int_fast16_t ... yes
+using int_fast8_t ... yes
+using int_fast32_t ... yes
+using int_fast64_t ... yes
+using struct io_uring_sqe field addr3 ... yes
+using struct iphdr ... yes
+using __itimer_which_t ... yes
+using struct kbdiacrs ... yes
+using struct kbentry ... yes
+using struct kbkeycode ... yes
+using struct kbsentry ... yes
+using __kernel_long_t ... yes
+using __kernel_ulong_t ... yes
+using key_t ... yes
+using struct landlock_ruleset_attr ... yes
+using __m128i_u ... no
+using loff_t ... yes
+using landlock_rule_type ... yes
+using __m256i_u ... no
+using struct media_device_info ... yes
+using struct mnt_id_req ... yes
+using struct mtrr_gentry ... no
+using mode_t ... yes
+using mtx_t ... yes
+using struct mtrr_sentry ... no
+using struct msginfo ... yes
+using struct open_how ... no
+using off64_t ... yes
+using off_t ... yes
+using struct page_region ... yes
+using struct pm_scan_arg ... yes
+using __pid_type ... yes
+using __priority_which_t ... yes
+using struct procmap_query ... yes
+using pthread_mutex_t ... yes
+using pthread_mutexattr_t ... yes
+using ptrace_request ... yes
+using __rlimit_resource_t ... yes
+using struct rtc_param ... yes
+using struct rusage.ru_minflt ... yes
+using struct rusage.ru_maxrss ... yes
+using struct sctp_assocparams ... no
+using struct sctp_assoc_stats ... no
+using struct rusage.ru_nvcsw ... yes
+using struct sctp_assoc_value ... no
+using __rusage_who_t ... yes
+using struct sctp_default_prinfo ... no
+using struct sctp_getaddrs ... no
+using struct sctp_event_subscribe ... no
+using struct sctp_initmsg ... no
+using struct sctp_paddrinfo ... no
+using struct sctp_paddrparams ... no
+using struct sctp_prim ... no
+using struct sctp_probeinterval ... no
+using struct sctp_rtoinfo ... no
+using struct sctp_sched_type ... no
+using struct sctp_setadaption ... no
+using struct sctp_stream_value ... no
+using struct sctp_status ... no
+using struct sctp_udpencaps ... no
+using struct seccomp_notif_sizes ... yes
+using struct serial_icounter_struct ... yes
+using struct serial_struct ... yes
+using struct shmid_ds ... yes
+using struct shminfo ... yes
+using struct snd_ctl_card_info ... yes
+using struct sockaddr_un ... yes
+using struct snd_ctl_tlv ... yes
+using struct termios ... yes
+using struct timex ... yes
+using struct timezone ... yes
+using struct tpacket_req3 ... yes
+using struct user_desc ... no
+using struct unimapdesc ... yes
+using struct usbdevfs_getdriver ... yes
+using __v2di ... no
+using struct utimbuf ... yes
+using struct v4l2_capability ... yes
+using struct v4l2_audioout ... yes
+using struct v4l2_audio ... yes
+using struct v4l2_dv_timings ... yes
+using struct v4l2_enc_idx ... yes
+using struct v4l2_jpegcompression ... yes
+using struct v4l2_framebuffer ... yes
+using v4l2_std_id ... yes
+using struct vt_consize ... yes
+using struct vt_mode ... yes
+using struct vt_stat ... yes
+using struct vt_sizes ... yes
+using struct winsize ... yes
+using __rseq_offset ... yes
+using adjtime ... yes
+using accept4 ... yes
+using adjtimex ... yes
+using aio_cancel ... no
+using aio_fsync ... no
+using aio_read ... no
+using aio_write ... no
+using arch_prctl ... no
+using aligned_alloc ... yes
+using arc4random ... yes
+using atomics with -latomic ... yes
+using __atomic_and_fetch ... yes
+using __atomic_add_fetch ... yes
+using __atomic_clear ... yes
+using __atomic_compare_exchange ... yes
+using __atomic_fetch_add ... yes
+using __atomic_fetch_add_4 ... yes
+using __atomic_fetch_add_2 ... yes
+using __atomic_fetch_add_8 ... yes
+using __atomic_fetch_and ... yes
+using __atomic_fetch_nand ... yes
+using __atomic_fetch_or ... yes
+using __atomic_fetch_sub ... yes
+using __atomic_fetch_xor ... yes
+using __atomic_load ... yes
+using __atomic_load_double ... yes
+using __atomic_nand_fetch ... yes
+using __atomic_store_double ... yes
+using __atomic_or_fetch ... yes
+using __atomic_store ... yes
+using __atomic_sub_fetch ... yes
+using __atomic_test_and_set ... yes
+using strlcat ... no
+using brk ... yes
+using __atomic_xor_fetch ... yes
+using strlcpy ... no
+using backtrace ... yes
+using __builtin_assume_aligned ... yes
+using bsearch ... yes
+using __builtin_bitreverse ... no
+using __builtin_bswap32 ... yes
+using __builtin_cabsf ... yes
+using __builtin_cabs ... yes
+using __builtin_cabsl ... yes
+using __builtin_cbrt ... yes
+using __builtin_cbrtf ... yes
+using __builtin_cbrtl ... yes
+using __builtin_ccosf ... yes
+using __builtin_ccos ... yes
+using __builtin_ccosl ... yes
+using __builtin_ccoshf ... yes
+using __builtin_ccosh ... yes
+using __builtin_ccoshl ... yes
+using __builtin_cexp ... yes
+using __builtin_cexpl ... yes
+using __builtin___clear_cache ... yes
+using __builtin_cexpf ... yes
+using __builtin_clog ... yes
+using __builtin_clogl ... yes
+using __builtin_clz ... yes
+using __builtin_clogf ... yes
+using __builtin_clzl ... yes
+using __builtin_clzll ... yes
+using __builtin_constant_p ... yes
+using __builtin_complex ... yes
+using __builtin_cos ... yes
+using __builtin_coshf ... yes
+using __builtin_cosf ... yes
+using __builtin_coshl ... yes
+using __builtin_cosl ... yes
+using __builtin_cpow ... yes
+using __builtin_cpu_is(power9) ... no
+using __builtin_cpu_is(power10) ... no
+using __builtin_cpowl ... yes
+using __builtin_cpowf ... yes
+using __builtin_cpu_is(power11) ... no
+using __builtin_csin ... yes
+using __builtin_csinf ... yes
+using __builtin_csinl ... yes
+using __builtin_csinh ... yes
+using __builtin_csinhf ... yes
+using __builtin_csinhl ... yes
+using __builtin_csqrt ... yes
+using __builtin_csqrtf ... yes
+using __builtin_ctanf ... yes
+using __builtin_ctan ... yes
+using __builtin_csqrtl ... yes
+using __builtin_ctanh ... yes
+using __builtin_ctanl ... yes
+using __builtin_ctanhl ... yes
+using __builtin_ctanhf ... yes
+using __builtin_ctz ... yes
+using __builtin_exp ... yes
+using __builtin_exp10 ... yes
+using __builtin_exp10f ... yes
+using __builtin_exp10l ... yes
+using __builtin_exp2f ... yes
+using __builtin_exp2 ... yes
+using __builtin_exp2l ... yes
+using __builtin_expect ... yes
+using __builtin_expf ... yes
+using __builtin_fabs ... yes
+using __builtin_fabsf ... yes
+using __builtin_expl ... yes
+using __builtin_fabsl ... yes
+using __builtin_fmaf ... yes
+using __builtin_fma ... yes
+using __builtin_ia32_movntdq ... no
+using __builtin_hypot ... yes
+using __builtin_ia32_movnti ... no
+using __builtin_hypotl ... yes
+using __builtin_hypotf ... yes
+using __builtin_ia32_movnti64 ... no
+using __builtin_j1 ... yes
+using __builtin_jn ... yes
+using __builtin_j0 ... yes
+using __builtin_j0f ... yes
+using __builtin_j1f ... yes
+using __builtin_jnf ... yes
+using __builtin_j0l ... yes
+using __builtin_j1l ... yes
+using __builtin_lgammal ... yes
+using __builtin_llabs ... yes
+using __builtin_jnl ... yes
+using __builtin_log ... yes
+using __builtin_log10 ... yes
+using __builtin_log10f ... yes
+using __builtin_log10l ... yes
+using __builtin_log2 ... yes
+using __builtin_log2f ... yes
+using __builtin_log2l ... yes
+using __builtin_logb ... yes
+using __builtin_logbf ... yes
+using __builtin_logf ... yes
+using __builtin_logbl ... yes
+using __builtin_memcmp ... yes
+using __builtin_logl ... yes
+using __builtin_memset ... yes
+using __builtin_memmove ... yes
+using __builtin_memcpy ... yes
+using __builtin_nontemporal_load ... no
+using __builtin_nontemporal_store ... no
+using __builtin_parity ... yes
+using __builtin_popcount ... yes
+using __builtin_popcountll ... yes
+using __builtin_popcountl ... yes
+using __builtin_prefetch ... yes
+using __builtin_pow ... yes
+using __builtin_powf ... yes
+using __builtin_powl ... yes
+using __builtin_rotateleft16 ... no
+using __builtin_rotateleft32 ... no
+using __builtin_rint ... yes
+using __builtin_rintl ... yes
+using __builtin_rotateleft64 ... no
+using __builtin_rotateleft8 ... no
+using __builtin_rotateright32 ... no
+using __builtin_rotateright16 ... no
+using __builtin_rotateright8 ... no
+using __builtin_rotateright64 ... no
+using __builtin_ia32_sfence ... no
+using __builtin_roundl ... yes
+using __builtin_sin ... yes
+using __builtin_sincosf ... yes
+using __builtin_sincos ... yes
+using __builtin_shuffle ... yes
+using __builtin_sinf ... yes
+using __builtin_sincosl ... yes
+using __builtin_sinhl ... yes
+using __builtin_sinh ... yes
+using __builtin_sinhf ... yes
+using __builtin_sinl ... yes
+using __builtin_stdc_rotate_left ... no
+using __builtin_stdc_rotate_right ... no
+using __builtin_sqrtf ... yes
+using __builtin_sqrtl ... yes
+using __builtin_sqrt ... yes
+using __builtin_supports ... no
+using __builtin_strdup ... yes
+using __builtin_tan ... yes
+using __builtin_tanf ... yes
+using __builtin_tanl ... yes
+using __builtin_tanh ... yes
+using __builtin_tanhf ... yes
+using __builtin_tanhl ... yes
+using __builtin_thread_pointer ... yes
+using __builtin_y0 ... yes
+using __builtin_y1 ... yes
+using __builtin_yn ... yes
+using __builtin_y0f ... yes
+using __builtin_y1f ... yes
+using __builtin_y0l ... yes
+using __builtin_y1l ... yes
+using __builtin_ynf ... yes
+using cacheflush ... no
+using __builtin_ynl ... yes
+using cabsl ... yes
+using cbrt ... yes
+using cbrtl ... yes
+using cbrtf ... yes
+using ccos ... yes
+using ccoshf ... yes
+using ccosh ... yes
+using ccosf ... yes
+using ccosl ... yes
+using ccoshl ... yes
+using cexpf ... yes
+using cexp ... yes
+using cexpl ... yes
+using cfgetospeed ... yes
+using chroot ... yes
+using cfgetispeed ... yes
+using cimag ... yes
+using cimagf ... yes
+using clearenv ... yes
+using clock_adjtime ... yes
+using cimagl ... yes
+using clock_getres ... yes
+using clock_gettime ... yes
+using clock_nanosleep ... yes
+using clock_settime ... yes
+using clogl ... yes
+using clogf ... yes
+using clog ... yes
+using clone ... yes
+using close_range ... yes
+using copy_file_range ... yes
+using cosh ... yes
+using coshl ... yes
+using coshf ... yes
+using cosl ... yes
+using cpow ... yes
+using cpowf ... yes
+using cpowl ... yes
+using crypt_r ... no
+using creal ... yes
+using crealf ... yes
+using creall ... yes
+using csin ... yes
+using csinf ... yes
+using csinl ... yes
+using csinh ... yes
+using csinhf ... yes
+using csqrt ... yes
+using csinhl ... yes
+using csqrtf ... yes
+using csqrtl ... yes
+using ctan ... yes
+using ctanl ... yes
+using ctanf ... yes
+using ctanh ... yes
+using delete_module ... no
+using ctanhf ... yes
+using eigen C++ functions ... no, not using gcc
+using ctanhl ... yes
+using endmntent ... yes
+using dup3 ... yes
+using drand48 ... yes
+using endpwent ... yes
+using epoll_create1 ... yes
+using epoll_create ... yes
+using __executable_start ... yes
+using eventfd ... yes
+using execveat ... yes
+using exp10 ... yes
+using exp ... yes
+using exp10f ... yes
+using exp10l ... yes
+using exp2 ... yes
+using exp2f ... yes
+using exp2l ... yes
+using expf ... yes
+using faccessat2 ... no
+using expl ... yes
+using faccessat ... yes
+using fallocate ... yes
+using fchmodat2 ... no
+using fchmodat ... yes
+using fanotify ... yes
+using fchownat ... yes
+using fdatasync ... yes
+using fexecve ... yes
+using fgetxattr ... yes
+using finit_module ... no
+using flistxattr ... yes
+using flock ... yes
+using fremovexattr ... yes
+using fma ... yes
+using fmaf ... yes
+using fsetxattr ... yes
+using fstatat ... yes
+using fstat ... yes
+using fsync ... yes
+using futimens ... yes
+using futimes ... yes
+using futimesat ... yes
+using getauxval ... yes
+using getcpu ... yes
+using getexecname ... no
+using getdomainname ... yes
+using getdtablesize ... yes
+using getentropy ... yes
+using getgroups ... yes
+using gethostid ... yes
+using gethostname ... yes
+using getitimer ... yes
+using getmntinfo ... no
+using getlogin ... yes
+using getloadavg ... yes
+using getmntent ... yes
+using getpagesize ... yes
+using getpgrp ... yes
+using getpgid ... yes
+using getpriority ... yes
+using getpwent ... yes
+using getresgid ... yes
+using getrandom ... yes
+using getresuid ... yes
+using getrusage ... yes
+using getsid ... yes
+using gettid ... yes
+using gettimeofday ... yes
+using getxattr ... yes
+using heapsort (without libbsd) ... no
+using getxattrat ... no
+using hsearch ... yes
+using index ... no
+using hypot ... yes
+using init_mb_mgr_avx ... no
+using hypotf ... yes
+using hypotl ... yes
+using intrinsic __rolb ... no
+using inotify ... yes
+using intrinsic __rold ... no
+using intrinsic __rolq ... no
+using inotify1 ... yes
+using intrinsic __rolw ... no
+using intrinsic __rorb ... no
+using intrinsic __rord ... no
+using intrinsic __rorq ... no
+using iopl ... no
+using intrinsic __rorw ... no
+using ioport ... no
+using j0 ... yes
+using j0f ... yes
+using j1 ... yes
+using jn ... yes
+using j1f ... yes
+using jnf ... yes
+using j1l ... yes
+using j0l ... yes
+using jnl ... yes
+using lgammal ... yes
+using lgetxattr ... yes
+using linkat ... yes
+using listxattr ... yes
+using listxattrat ... no
+using llistxattr ... yes
+using localtime_r ... yes
+using lockf ... yes
+using log ... yes
+using log10 ... yes
+using log10f ... yes
+using log10l ... yes
+using log2f ... yes
+using log2 ... yes
+using log2l ... yes
+using logb ... yes
+using logbl ... yes
+using logbf ... yes
+using lookup_dcookie ... yes
+using logf ... yes
+using logl ... yes
+using lrand48 ... yes
+using lremovexattr ... yes
+using lseek64 ... yes
+using lsearch ... yes
+using lsm_get_self_attr ... no
+using lsetxattr ... yes
+using lsm_list_modules ... no
+using lstat ... yes
+using malloc_trim ... yes
+using madvise ... yes
+using malloc_usable_size ... yes
+using membarrier ... no
+using mallopt ... yes
+using mergesort (without libbsd) ... no
+using memfd_create ... yes
+using memalign ... yes
+using mincore ... yes
+using mkdirat ... yes
+using mkfifo ... yes
+using mknod ... yes
+using mlock ... yes
+using mlockall ... yes
+using mlock2 ... yes
+using mknodat ... yes
+using _mm_getcsr ... no
+using _mm_setcsr ... no
+using _mm_stream_si128 ... no
+using _mm_stream_si32 ... no
+using _mm_stream_si64 ... no
+using modify_ldt ... no
+using mquery ... no
+using mprotect ... yes
+using mseal ... no
+using SYSV message queues ... yes
+using POSIX message queues ... yes
+using mremap ... yes
+using mtx_destroy ... yes
+using msync ... yes
+using mtx_init ... yes
+using munlock ... yes
+using munlockall ... yes
+using name_to_handle_at ... yes
+using nanosleep ... yes
+using nice ... yes
+using openat ... yes
+using open_by_handle_at ... yes
+using open_memstream ... yes
+using openat2 ... yes
+using pathconf ... yes
+using personality ... yes
+using pause ... yes
+using pidfd_getfd ... yes
+using pidfd_open ... yes
+using pidfd_send_signal ... yes
+using pipe2 ... yes
+using pkey_alloc ... yes
+using pkey_free ... yes
+using pkey_get ... yes
+using pkey_mprotect ... yes
+using pkey_set ... yes
+using posix_fadvise ... yes
+using posix_fallocate ... yes
+using poll ... yes
+using posix_madvise ... yes
+using posix_openpt ... yes
+using posix_memalign ... yes
+using posix_spawn ... yes
+using __ppc_get_timebase ... no
+using pow ... yes
+using powf ... yes
+using powl ... yes
+using ppoll ... yes
+using prctl ... yes
+using pread ... yes
+using preadv ... yes
+using preadv2 ... yes
+using prlimit ... yes
+using process_vm_readv ... yes
+using process_vm_writev ... yes
+using pthread_attr_setstack ... yes
+using program_invocation_name ... yes
+using pselect ... yes
+using pthread_barrier ... yes
+using pthread_mutexattr_init ... yes
+using pthread_mutexattr_destroy ... yes
+using pthread_mutexattr_setprioceiling ... yes
+using pthread_mutexattr_setprotocol ... yes
+using pthread_mutexattr_setrobust ... yes
+using pthread_mutex_destroy ... yes
+using pthread_mutex_init ... yes
+using PTHREAD_PRIO_INHERIT ... yes
+using PTHREAD_PRIO_PROTECT ... yes
+using PTHREAD_PRIO_NONE ... yes
+using pthread_setaffinity_np ... yes
+using pthread_setschedparam ... yes
+using ptrace ... yes
+using ptsname ... yes
+using pthread_sigqueue ... yes
+using pwrite ... yes
+using pwritev ... yes
+using quotactl_fd ... no
+using radixsort (without libbsd) ... no
+using pwritev2 ... yes
+using readahead ... yes
+using random ... yes
+using readlinkat ... yes
+using readv ... yes
+using regcomp ... yes
+using recvmsg ... yes
+using regerror ... yes
+using recvmmsg ... yes
+using regexec ... yes
+using remap_file_pages ... yes
+using regfree ... yes
+using removexattr ... yes
+using removexattrat ... no
+using rfork ... no
+using renameat2 ... yes
+using renameat ... yes
+using rindex ... no
+using sbrk ... yes
+using roundl ... yes
+using rintl ... yes
+using sched_getaffinity ... yes
+using sched_getcpu ... yes
+using sched_get_priority_max ... yes
+using sched_get_priority_min ... yes
+using sched_rr_get_interval ... yes
+using sched_setaffinity ... yes
+using sched_yield ... yes
+using sched_setscheduler ... yes
+using select ... yes
+using seed48 ... yes
+using POSIX semaphores ... yes
+using semtimedop ... yes
+using SYSV semaphores ... yes
+using sendfile ... yes
+using sendmsg ... yes
+using setdomainname ... yes
+using setfsgid ... yes
+using setgroups ... yes
+using setfsuid ... yes
+using sendmmsg ... yes
+using setitimer ... yes
+using setmntent ... yes
+using setpgid ... yes
+using setns ... yes
+using setpgrp ... yes
+using setproctitle ... no
+using setproctitle_init ... no
+using setpriority ... yes
+using setregid ... yes
+using setpwent ... yes
+using setresgid ... yes
+using setresuid ... yes
+using setreuid ... yes
+using settimeofday ... yes
+using setxattr ... yes
+using setxattrat ... no
+using shm_unlink ... yes
+using SYSV shm ... yes
+using shm_open ... yes
+using siglongjmp ... yes
+using sigaltstack ... yes
+using signalfd ... yes
+using sigqueue ... yes
+using sigwaitinfo ... yes
+using sincos ... yes
+using sincosf ... yes
+using sincosl ... yes
+using sinh ... yes
+using sinhf ... yes
+using splice ... yes
+using sinhl ... yes
+using sinl ... yes
+using srand48 ... yes
+using sqrtf ... yes
+using sqrt ... yes
+using sqrtl ... yes
+using srandom ... yes
+using statfs ... yes
+using stat ... yes
+using stime ... no
+using statx ... yes
+using swapon ... yes
+using swapcontext ... yes
+using sync ... yes
+using sync_bool_compare_and_swap ... yes
+using symlinkat ... yes
+using sync_file_range ... yes
+using __sync_synchronize ... yes
+using sync_val_compare_and_swap ... yes
+using syncfs ... yes
+using syscall ... yes
+using sysinfo ... yes
+using tcdrain ... yes
+using tanhl ... yes
+using tanl ... yes
+using tcflow ... yes
+using tcflush ... yes
+using tcgetattr ... yes
+using tee ... yes
+using timer_delete ... yes
+using tgkill ... yes
+using timerfd_create ... yes
+using timerfd_gettime ... yes
+using timerfd_settime ... yes
+using timer_getoverrrun ... yes
+using timer_gettime ... yes
+using timer_settime ... yes
+using time ... yes
+using tsearch ... yes
+using timer_create ... yes
+using ttyname ... yes
+using umount2 ... yes
+using uname ... yes
+using unlinkat ... yes
+using ustat ... no
+using unshare ... yes
+using utime ... yes
+using utimes ... yes
+using utimensat ... yes
+using valloc ... yes
+using vfork ... yes
+using vhangup ... yes
+using vmsplice ... yes
+using wait3 ... yes
+using waitid ... yes
+using wait4 ... yes
+using wcscasecmp ... no
+using waitpid ... yes
+using wcschr ... no
+using wcscat ... no
+using wcscmp ... no
+using wcscoll ... no
+using wcscpy ... no
+using wcslcat ... no
+using wcslcpy ... no
+using wcslen ... no
+using wcsncat ... no
+using wcsncasecmp ... no
+using wcsncmp ... no
+using wcsrchr ... no
+using wcsxfrm ... no
+using writev ... yes
+using y1 ... yes
+using y0 ... yes
+using y0f ... yes
+using yn ... yes
+using y1f ... yes
+using ynf ... yes
+using y0l ... yes
+using y1l ... yes
+using ynl ... yes
+1122 configurations checked
+make[2]: Leaving directory '/workspaces/home/buildroot/output/build/stress-ng-0.20.00'
+CC stress-eigen-ops.c
+MK personality.h
+Generating empty AppArmor profile
+CC core-perf.c
+MK io-uring.h
+CC stress-vecmath.c
+CC stress-vecshuf.c
+CC stress-vecwide.c
+CC stress-verity.c
+CC stress-vforkmany.c
+CC stress-vm.c
+CC stress-vm-addr.c
+CC stress-vm-rw.c
+CC stress-vm-segv.c
+CC stress-vm-splice.c
+CC stress-vma.c
+CC stress-vnni.c
+CC stress-wait.c
+CC stress-waitcpu.c
+CC stress-watchdog.c
+CC stress-wcs.c
+CC stress-workload.c
+CC stress-x86cpuid.c
+CC stress-x86syscall.c
+CC stress-xattr.c
+CC stress-yield.c
+CC stress-zero.c
+CC stress-zlib.c
+CC stress-zombie.c
+CC core-affinity.c
+CC core-arch.c
+CC core-asm-ret.c
+CC core-capabilities.c
+CC core-cpu.c
+CC core-cpu-cache.c
+CC core-cpu-freq.c
+CC core-cpuidle.c
+CC core-clocksource.c
+CC core-config-check.c
+CC core-filesystem.c
+CC core-hash.c
+CC core-helper.c
+CC core-ignite-cpu.c
+CC core-interrupts.c
+CC core-io-uring.c
+CC core-io-priority.c
+CC core-job.c
+CC core-killpid.c
+CC core-klog.c
+CC core-limit.c
+CC core-lock.c
+CC core-log.c
+CC core-madvise.c
+CC core-memory.c
+CC core-mincore.c
+CC core-mlock.c
+CC core-mmap.c
+CC core-module.c
+CC core-mounts.c
+CC core-mwc.c
+CC core-net.c
+CC core-numa.c
+CC core-opts.c
+CC core-out-of-memory.c
+CC core-parse-opts.c
+CC core-prime.c
+CC core-processes.c
+CC core-rapl.c
+CC core-resctrl.c
+CC core-resources.c
+CC core-sched.c
+CC core-setting.c
+CC core-shared-cache.c
+CC core-shared-heap.c
+CC core-shim.c
+CC core-signal.c
+CC core-smart.c
+CC core-sort.c
+CC core-stack.c
+CC core-sync.c
+CC core-thermal-zone.c
+CC core-time.c
+CC core-thrash.c
+CC core-ftrace.c
+CC core-try-open.c
+CC core-vmstat.c
+CC core-workload.c
+CC stress-ng.c
+CC core-config.c
+CC stress-access.c
+CC stress-acl.c
+CC stress-affinity.c
+CC stress-af-alg.c
+CC stress-aio.c
+CC stress-aiol.c
+CC stress-alarm.c
+CC stress-apparmor.c
+CC stress-atomic.c
+CC stress-bad-altstack.c
+CC stress-bad-ioctl.c
+CC stress-besselmath.c
+CC stress-bigheap.c
+CC stress-bind-mount.c
+CC stress-binderfs.c
+CC stress-bitonicsort.c
+CC stress-bitops.c
+CC stress-branch.c
+CC stress-brk.c
+CC stress-bsearch.c
+CC stress-bubblesort.c
+CC stress-cache.c
+CC stress-cachehammer.c
+CC stress-cacheline.c
+CC stress-cap.c
+CC stress-cgroup.c
+CC stress-chattr.c
+CC stress-chdir.c
+CC stress-chmod.c
+CC stress-chown.c
+CC stress-chroot.c
+CC stress-chyperbolic.c
+CC stress-clock.c
+CC stress-clone.c
+CC stress-close.c
+CC stress-context.c
+CC stress-copy-file.c
+CC stress-cpu.c
+CC stress-cpu-online.c
+CC stress-cpu-sched.c
+CC stress-crypt.c
+CC stress-ctrig.c
+CC stress-cyclic.c
+CC stress-daemon.c
+CC stress-dccp.c
+CC stress-dekker.c
+CC stress-dentry.c
+CC stress-dev.c
+CC stress-dev-shm.c
+CC stress-dfp.c
+CC stress-dir.c
+CC stress-dirdeep.c
+CC stress-dirmany.c
+CC stress-dnotify.c
+CC stress-dup.c
+CC stress-dynlib.c
+CC stress-easy-opcode.c
+CC stress-eigen.c
+CC stress-efivar.c
+CC stress-enosys.c
+CC stress-env.c
+CC stress-epoll.c
+CC stress-eventfd.c
+CC stress-exec.c
+CC stress-exit-group.c
+CC stress-expmath.c
+CC stress-factor.c
+CC stress-fallocate.c
+CC stress-fanotify.c
+CC stress-far-branch.c
+CC stress-fault.c
+CC stress-fcntl.c
+CC stress-fd-abuse.c
+CC stress-fd-fork.c
+CC stress-fd-race.c
+CC stress-fibsearch.c
+CC stress-fiemap.c
+CC stress-fifo.c
+CC stress-file-ioctl.c
+CC stress-filename.c
+CC stress-filerace.c
+CC stress-flipflop.c
+CC stress-flock.c
+CC stress-flushcache.c
+CC stress-fma.c
+CC stress-fork.c
+CC stress-forkheavy.c
+CC stress-fp.c
+CC stress-fp-error.c
+CC stress-fpunch.c
+CC stress-fractal.c
+CC stress-fsize.c
+CC stress-fstat.c
+CC stress-full.c
+CC stress-funccall.c
+CC stress-funcret.c
+CC stress-futex.c
+CC stress-get.c
+CC stress-getrandom.c
+CC stress-getdent.c
+CC stress-goto.c
+CC stress-gpu.c
+CC stress-handle.c
+CC stress-hash.c
+CC stress-hdd.c
+CC stress-heapsort.c
+CC stress-hrtimers.c
+CC stress-hsearch.c
+CC stress-hyperbolic.c
+CC stress-icache.c
+CC stress-icmp-flood.c
+CC stress-idle-page.c
+CC stress-inode-flags.c
+CC stress-inotify.c
+CC stress-insertionsort.c
+CC stress-intmath.c
+CC stress-io.c
+CC stress-iomix.c
+CC stress-ioport.c
+CC stress-ioprio.c
+CC stress-io-uring.c
+CC stress-ipsec-mb.c
+CC stress-itimer.c
+CC stress-jpeg.c
+CC stress-judy.c
+CC stress-kcmp.c
+CC stress-key.c
+CC stress-kill.c
+CC stress-klog.c
+CC stress-kvm.c
+CC stress-l1cache.c
+CC stress-landlock.c
+CC stress-lease.c
+CC stress-led.c
+CC stress-link.c
+CC stress-list.c
+CC stress-llc-affinity.c
+CC stress-loadavg.c
+CC stress-lockbus.c
+CC stress-locka.c
+CC stress-lockf.c
+CC stress-lockmix.c
+CC stress-lockofd.c
+CC stress-logmath.c
+CC stress-longjmp.c
+CC stress-loop.c
+CC stress-lsearch.c
+CC stress-lsm.c
+CC stress-madvise.c
+CC stress-malloc.c
+CC stress-matrix.c
+CC stress-matrix-3d.c
+CC stress-mcontend.c
+CC stress-membarrier.c
+CC stress-memcpy.c
+CC stress-memfd.c
+CC stress-memhotplug.c
+CC stress-memrate.c
+CC stress-memthrash.c
+CC stress-mergesort.c
+CC stress-metamix.c
+CC stress-mincore.c
+CC stress-min-nanosleep.c
+CC stress-misaligned.c
+CC stress-mknod.c
+CC stress-mlock.c
+CC stress-mlockmany.c
+CC stress-mmap.c
+CC stress-mmapaddr.c
+CC stress-mmapcow.c
+CC stress-mmapfiles.c
+CC stress-mmapfixed.c
+CC stress-mmapfork.c
+CC stress-mmaphuge.c
+CC stress-mmapmany.c
+CC stress-mmaprandom.c
+CC stress-mmaptorture.c
+CC stress-module.c
+CC stress-monte-carlo.c
+CC stress-mprotect.c
+CC stress-mpfr.c
+CC stress-mq.c
+CC stress-mremap.c
+CC stress-mseal.c
+CC stress-msg.c
+CC stress-msync.c
+CC stress-msyncmany.c
+CC stress-mtx.c
+CC stress-munmap.c
+CC stress-nanosleep.c
+CC stress-mutex.c
+CC stress-netdev.c
+CC stress-netlink-proc.c
+CC stress-netlink-task.c
+CC stress-nice.c
+CC stress-nop.c
+CC stress-null.c
+CC stress-numa.c
+CC stress-oom-pipe.c
+CC stress-opcode.c
+CC stress-open.c
+CC stress-pagemove.c
+CC stress-pageswap.c
+CC stress-pci.c
+CC stress-personality.c
+CC stress-peterson.c
+CC stress-physpage.c
+CC stress-physmmap.c
+CC stress-pidfd.c
+CC stress-ping-sock.c
+CC stress-pipe.c
+CC stress-pipeherd.c
+CC stress-pkey.c
+CC stress-plugin.c
+CC stress-poll.c
+CC stress-powmath.c
+CC stress-prctl.c
+CC stress-prefetch.c
+CC stress-prime.c
+CC stress-prio-inv.c
+CC stress-priv-instr.c
+CC stress-procfs.c
+CC stress-pseek.c
+CC stress-pthread.c
+CC stress-ptrace.c
+CC stress-ptr-chase.c
+CC stress-pty.c
+CC stress-quota.c
+CC stress-qsort.c
+CC stress-race-sched.c
+CC stress-radixsort.c
+CC stress-randlist.c
+CC stress-ramfs.c
+CC stress-rawdev.c
+CC stress-rawpkt.c
+CC stress-rawsock.c
+CC stress-rawudp.c
+CC stress-rdrand.c
+CC stress-readahead.c
+CC stress-reboot.c
+CC stress-regex.c
+CC stress-regs.c
+CC stress-remap.c
+CC stress-rename.c
+CC stress-resched.c
+CC stress-resources.c
+CC stress-revio.c
+CC stress-ring-pipe.c
+CC stress-rlimit.c
+CC stress-rmap.c
+CC stress-rotate.c
+CC stress-rseq.c
+CC stress-rtc.c
+CC stress-sctp.c
+CC stress-schedmix.c
+CC stress-schedpolicy.c
+CC stress-seal.c
+CC stress-seccomp.c
+CC stress-secretmem.c
+CC stress-seek.c
+CC stress-sem.c
+CC stress-sem-sysv.c
+CC stress-sendfile.c
+CC stress-session.c
+CC stress-set.c
+CC stress-shellsort.c
+CC stress-shm.c
+CC stress-shm-sysv.c
+CC stress-sigabrt.c
+CC stress-sigbus.c
+CC stress-sigchld.c
+CC stress-sigfd.c
+CC stress-sigfpe.c
+CC stress-sighup.c
+CC stress-sigill.c
+CC stress-sigio.c
+CC stress-signal.c
+CC stress-signest.c
+CC stress-sigpending.c
+CC stress-sigpipe.c
+CC stress-sigq.c
+CC stress-sigrt.c
+CC stress-sigsegv.c
+CC stress-sigsuspend.c
+CC stress-sigtrap.c
+CC stress-sigurg.c
+CC stress-sigvtalrm.c
+CC stress-sigxcpu.c
+CC stress-sigxfsz.c
+CC stress-skiplist.c
+CC stress-sleep.c
+CC stress-smi.c
+CC stress-sock.c
+CC stress-sockabuse.c
+CC stress-sockdiag.c
+CC stress-sockfd.c
+CC stress-sockpair.c
+CC stress-sockmany.c
+CC stress-softlockup.c
+CC stress-spawn.c
+CC stress-sparsematrix.c
+CC stress-spinmem.c
+CC stress-splice.c
+CC stress-stack.c
+CC stress-stackmmap.c
+CC stress-statmount.c
+CC stress-str.c
+CC stress-stream.c
+CC stress-swap.c
+CC stress-switch.c
+CC stress-sync-file.c
+CC stress-syncload.c
+CC stress-sysbadaddr.c
+CC stress-syscall.c
+CC stress-sysinfo.c
+CC stress-sysinval.c
+CC stress-sysfs.c
+CC stress-tee.c
+CC stress-timer.c
+CC stress-timerfd.c
+CC stress-timermix.c
+CC stress-time-warp.c
+CC stress-tlb-shootdown.c
+CC stress-tmpfs.c
+CC stress-touch.c
+CC stress-tree.c
+CC stress-trig.c
+CC stress-tsc.c
+CC stress-tsearch.c
+CC stress-tun.c
+CC stress-udp.c
+CC stress-udp-flood.c
+CC stress-umask.c
+CC stress-umount.c
+CC stress-unlink.c
+CC stress-unshare.c
+CC stress-uprobe.c
+CC stress-urandom.c
+CC stress-usersyscall.c
+CC stress-userfaultfd.c
+CC stress-utime.c
+CC stress-varyload.c
+CC stress-vdso.c
+CC stress-veccmp.c
+CC stress-vecfp.c
+LD stress-ng
+make[1]: Leaving directory '/workspaces/home/buildroot/output/build/stress-ng-0.20.00'
+[7m>>> stress-ng 0.20.00 Installing to target[27m
+/usr/bin/install -m 0755 -D /workspaces/home/buildroot/output/build/stress-ng-0.20.00/stress-ng /workspaces/home/buildroot/output/target/usr/bin/stress-ng
+[7m>>>   Finalizing host directory[27m
+[7m>>>   Finalizing target directory[27m
+mkdir -p /workspaces/home/buildroot/output/host/etc/meson
+sed -e "s%@TARGET_CFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'@PKG_TARGET_CFLAGS@%g" -e "s%@TARGET_LDFLAGS@%@PKG_TARGET_LDFLAGS@%g" -e "s%@TARGET_CXXFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'@PKG_TARGET_CXXFLAGS@%g" -e "s%@TARGET_FCFLAGS@%'-O2', '-g0'@PKG_TARGET_FCFLAGS@%g"         -e "s%@TARGET_CC@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc%g" -e "s%@TARGET_CXX@%/bin/false%g" -e "s%@TARGET_AR@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ar%g" -e "s%@TARGET_FC@%/bin/false%g" -e "s%@TARGET_STRIP@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip%g" -e "s%@TARGET_ARCH@%aarch64%g" -e "s%@TARGET_CPU@%cortex-a53%g" -e "s%@TARGET_ENDIAN@%little%g" -e "s%@TARGET_FCFLAGS@%%g" -e "s%@TARGET_CFLAGS@%%g" -e "s%@TARGET_LDFLAGS@%%g" -e "s%@TARGET_CXXFLAGS@%%g" -e "s%@BR2_CMAKE@%/usr/bin/cmake%g" -e "s%@PKGCONF_HOST_BINARY@%/workspaces/home/buildroot/output/host/bin/pkgconf%g" -e "s%@HOST_DIR@%/workspaces/home/buildroot/output/host%g" -e "s%@STAGING_DIR@%/workspaces/home/buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot%g" -e "s%@STATIC@%false%g" /workspaces/home/buildroot/support/misc/cross-compilation.conf.in > /workspaces/home/buildroot/output/host/etc/meson/cross-compilation.conf.in
+sed         -e "s%@TARGET_CC@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc%g" -e "s%@TARGET_CXX@%/bin/false%g" -e "s%@TARGET_AR@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-gcc-ar%g" -e "s%@TARGET_FC@%/bin/false%g" -e "s%@TARGET_STRIP@%/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip%g" -e "s%@TARGET_ARCH@%aarch64%g" -e "s%@TARGET_CPU@%cortex-a53%g" -e "s%@TARGET_ENDIAN@%little%g" -e "s%@TARGET_FCFLAGS@%'-O2', '-g0'%g" -e "s%@TARGET_CFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@TARGET_LDFLAGS@%%g" -e "s%@TARGET_CXXFLAGS@%'-D_LARGEFILE_SOURCE', '-D_LARGEFILE64_SOURCE', '-D_FILE_OFFSET_BITS=64', '-O2', '-g0', '-D_FORTIFY_SOURCE=1'%g" -e "s%@BR2_CMAKE@%/usr/bin/cmake%g" -e "s%@PKGCONF_HOST_BINARY@%/workspaces/home/buildroot/output/host/bin/pkgconf%g" -e "s%@HOST_DIR@%/workspaces/home/buildroot/output/host%g" -e "s%@STAGING_DIR@%/workspaces/home/buildroot/output/host/aarch64-buildroot-linux-gnu/sysroot%g" -e "s%@STATIC@%false%g" /workspaces/home/buildroot/support/misc/cross-compilation.conf.in > /workspaces/home/buildroot/output/host/etc/meson/cross-compilation.conf
+/usr/bin/sed -i -e '/# GENERIC_SERIAL$/s~^.*#~console::respawn:/sbin/getty -L  console 0 vt100 #~' /workspaces/home/buildroot/output/target/etc/inittab
+/usr/bin/sed -i -e '/^#.*-o remount,rw \/$/s~^#\+~~' /workspaces/home/buildroot/output/target/etc/inittab
+if grep -q CONFIG_ASH=y /workspaces/home/buildroot/output/build/busybox-1.37.0/.config; then grep -qsE '^/bin/ash$' /workspaces/home/buildroot/output/target/etc/shells || echo "/bin/ash" >> /workspaces/home/buildroot/output/target/etc/shells; fi
+if grep -q CONFIG_HUSH=y /workspaces/home/buildroot/output/build/busybox-1.37.0/.config; then grep -qsE '^/bin/hush$' /workspaces/home/buildroot/output/target/etc/shells || echo "/bin/hush" >> /workspaces/home/buildroot/output/target/etc/shells; fi
+mkdir -p /workspaces/home/buildroot/output/target/etc
+echo "RoboOS" > /workspaces/home/buildroot/output/target/etc/hostname
+/usr/bin/sed -i -e '$a \127.0.1.1\tRoboOS' -e '/^127.0.1.1/d' /workspaces/home/buildroot/output/target/etc/hosts
+mkdir -p /workspaces/home/buildroot/output/target/etc
+echo "RoboOS v1.0 - Standard Robotics Operating System" > /workspaces/home/buildroot/output/target/etc/issue
+/usr/bin/sed -i -e s,^root:[^:]*:,root::, /workspaces/home/buildroot/output/target/etc/shadow
+grep -qsE '^/bin/sh$' /workspaces/home/buildroot/output/target/etc/shells || echo "/bin/sh" >> /workspaces/home/buildroot/output/target/etc/shells
+if [ -x /workspaces/home/buildroot/output/target/sbin/swapon -a -x /workspaces/home/buildroot/output/target/sbin/swapoff ]; then /usr/bin/sed -i -e '/^#.*\/sbin\/swap/s/^#\+[[:blank:]]*//' /workspaces/home/buildroot/output/target/etc/inittab; else /usr/bin/sed -i -e '/^[^#].*\/sbin\/swap/s/^/#/' /workspaces/home/buildroot/output/target/etc/inittab; fi
+if test -d /workspaces/home/buildroot/output/target/lib/modules/`MAKEFLAGS='-j4 --jobserver-auth=3,4' /usr/bin/make  HOSTCC="/usr/bin/gcc -O2 -isystem /workspaces/home/buildroot/output/host/include -L/workspaces/home/buildroot/output/host/lib -Wl,-rpath,/workspaces/home/buildroot/output/host/lib" ARCH=arm64 KCFLAGS="-Wno-attribute-alias" INSTALL_MOD_PATH=/workspaces/home/buildroot/output/target CROSS_COMPILE="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-" WERROR=0 REGENERATE_PARSERS=1 DEPMOD=/workspaces/home/buildroot/output/host/sbin/depmod INSTALL_MOD_STRIP=1 -C /workspaces/home/buildroot/output/build/linux-6.18.7 --no-print-directory -s kernelrelease 2>/dev/null` && grep -q "CONFIG_MODULES=y" /workspaces/home/buildroot/output/build/linux-6.18.7/.config; then /workspaces/home/buildroot/output/host/sbin/depmod -a -b /workspaces/home/buildroot/output/target `MAKEFLAGS='-j4 --jobserver-auth=3,4' /usr/bin/make  HOSTCC="/usr/bin/gcc -O2 -isystem /workspaces/home/buildroot/output/host/include -L/workspaces/home/buildroot/output/host/lib -Wl,-rpath,/workspaces/home/buildroot/output/host/lib" ARCH=arm64 KCFLAGS="-Wno-attribute-alias" INSTALL_MOD_PATH=/workspaces/home/buildroot/output/target CROSS_COMPILE="/workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-" WERROR=0 REGENERATE_PARSERS=1 DEPMOD=/workspaces/home/buildroot/output/host/sbin/depmod INSTALL_MOD_STRIP=1 -C /workspaces/home/buildroot/output/build/linux-6.18.7 --no-print-directory -s kernelrelease 2>/dev/null`; fi
+printf '%s\n' C en_US locale-archive > /workspaces/home/buildroot/output/build/locales.nopurge
+for dir in /workspaces/home/buildroot/output/target/usr/share/locale /workspaces/home/buildroot/output/target/usr/share/X11/locale /workspaces/home/buildroot/output/target/usr/lib/locale; do if [ ! -d $dir ]; then continue; fi; for langdir in $dir/*; do if [ -e "${langdir}" ]; then grep -qx "${langdir##*/}" /workspaces/home/buildroot/output/build/locales.nopurge || rm -rf $langdir; fi done; done
+if [ -d /workspaces/home/buildroot/output/target/usr/share/X11/locale ]; then for lang in C en_US; do if [ -f /workspaces/home/buildroot/output/target/usr/share/X11/locale/$lang/XLC_LOCALE ]; then echo "$lang/XLC_LOCALE: $lang"; fi done > /workspaces/home/buildroot/output/target/usr/share/X11/locale/locale.dir; fi
+rm -rf /workspaces/home/buildroot/output/target/usr/include /workspaces/home/buildroot/output/target/usr/share/aclocal \
+	/workspaces/home/buildroot/output/target/usr/lib/pkgconfig /workspaces/home/buildroot/output/target/usr/share/pkgconfig \
+	/workspaces/home/buildroot/output/target/usr/lib/cmake /workspaces/home/buildroot/output/target/usr/share/cmake \
+	/workspaces/home/buildroot/output/target/usr/lib/rpm /workspaces/home/buildroot/output/target/usr/doc
+find /workspaces/home/buildroot/output/target/usr/{lib,share}/ -name '*.cmake' -print0 | xargs -0 rm -f
+find /workspaces/home/buildroot/output/target/lib/ /workspaces/home/buildroot/output/target/usr/lib/ /workspaces/home/buildroot/output/target/usr/libexec/ \
+	\( -name '*.a' -o -name '*.la' -o -name '*.prl' \) -print0 | xargs -0 rm -f
+find: ‘/workspaces/home/buildroot/output/target/usr/libexec/’: No such file or directory
+rm -rf /workspaces/home/buildroot/output/target/usr/share/gdb
+rm -rf /workspaces/home/buildroot/output/target/usr/share/bash-completion
+rm -rf /workspaces/home/buildroot/output/target/etc/bash_completion.d
+rm -rf /workspaces/home/buildroot/output/target/usr/share/zsh
+rm -rf /workspaces/home/buildroot/output/target/usr/man /workspaces/home/buildroot/output/target/usr/share/man
+rm -rf /workspaces/home/buildroot/output/target/usr/info /workspaces/home/buildroot/output/target/usr/share/info
+rm -rf /workspaces/home/buildroot/output/target/usr/doc /workspaces/home/buildroot/output/target/usr/share/doc
+rm -rf /workspaces/home/buildroot/output/target/usr/share/gtk-doc
+rmdir /workspaces/home/buildroot/output/target/usr/share 2>/dev/null || true
+rm -rf /workspaces/home/buildroot/output/target/lib/debug /workspaces/home/buildroot/output/target/usr/lib/debug
+find /workspaces/home/buildroot/output/target   -type f \( -perm /111 -o -name '*.so*' \) -not \( -name 'libpthread*.so*' -o -name 'ld-*.so*' -o -name '*.ko' \) -print0 | xargs -0 /workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip --remove-section=.comment --remove-section=.note 2>/dev/null || true
+find /workspaces/home/buildroot/output/target   \( -name 'ld-*.so*' -o -name 'libpthread*.so*' \) -print0 | xargs -0 -r /workspaces/home/buildroot/output/host/bin/aarch64-buildroot-linux-gnu-strip --remove-section=.comment --remove-section=.note --strip-debug 2>/dev/null || true
+test -f /workspaces/home/buildroot/output/target/etc/ld.so.conf && \
+	{ echo "ERROR: we shouldn't have a /etc/ld.so.conf file"; exit 1; } || true
+test -d /workspaces/home/buildroot/output/target/etc/ld.so.conf.d && \
+	{ echo "ERROR: we shouldn't have a /etc/ld.so.conf.d directory"; exit 1; } || true
+mkdir -p /workspaces/home/buildroot/output/target/etc
+( \
+	echo "NAME=Buildroot"; \
+	echo "VERSION=2026.02-493-ge1e0e71e1a-dirty"; \
+	echo "ID=buildroot"; \
+	echo "VERSION_ID=2026.05-git"; \
+	echo "PRETTY_NAME=\"Buildroot 2026.05-git\"" \
+) >  /workspaces/home/buildroot/output/target/usr/lib/os-release
+ln -sf ../usr/lib/os-release /workspaces/home/buildroot/output/target/etc
+[7m>>>   Sanitizing RPATH in target tree[27m
+PARALLEL_JOBS=5 \
+	PER_PACKAGE_DIR=/workspaces/home/buildroot/output/per-package \
+	/workspaces/home/buildroot/support/scripts/fix-rpath target
+[7m>>>   Sanity check in overlays board/roboos/rootfs_overlay[27m
+support/scripts/check-merged \
+	-t overlay \
+	 \
+	 \
+	board/roboos/rootfs_overlay
+[7m>>>   Copying overlay board/roboos/rootfs_overlay[27m
+touch /workspaces/home/buildroot/output/target/usr
+[7m>>>   Generating root filesystems common tables[27m
+rm -rf /workspaces/home/buildroot/output/build/buildroot-fs
+mkdir -p /workspaces/home/buildroot/output/build/buildroot-fs
+printf '   \n' >> /workspaces/home/buildroot/output/build/buildroot-fs/full_users_table.txt
+printf '   	/bin/busybox                     f 4755 0  0 - - - - -\n\n' > /workspaces/home/buildroot/output/build/buildroot-fs/full_devices_table.txt
+cat system/device_table.txt >> /workspaces/home/buildroot/output/build/buildroot-fs/full_devices_table.txt
+[7m>>>   Generating filesystem image rootfs.ext2[27m
+mkdir -p /workspaces/home/buildroot/output/images
+rm -rf /workspaces/home/buildroot/output/build/buildroot-fs/ext2
+mkdir -p /workspaces/home/buildroot/output/build/buildroot-fs/ext2
+rsync -auH --exclude=/THIS_IS_NOT_YOUR_ROOT_FILESYSTEM /workspaces/home/buildroot/output/target/ /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target
+echo '#!/bin/sh' > /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "set -e" >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "chown -h -R 0:0 /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target" >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+PATH="/workspaces/home/buildroot/output/host/bin:/workspaces/home/buildroot/output/host/sbin:/usr/local/rvm/gems/ruby-3.4.7/bin:/usr/local/rvm/gems/ruby-3.4.7@global/bin:/usr/local/rvm/rubies/ruby-3.4.7/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v24.11.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin" /workspaces/home/buildroot/support/scripts/mkusers /workspaces/home/buildroot/output/build/buildroot-fs/full_users_table.txt /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "/workspaces/home/buildroot/output/host/bin/makedevs -d /workspaces/home/buildroot/output/build/buildroot-fs/full_devices_table.txt /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target" >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   	rm -rf /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target/usr/lib/udev/hwdb.d/ /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target/etc/udev/hwdb.d/\n' >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "find /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target/run/ -mindepth 1 -prune -print0 | xargs -0r rm -rf --" >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+echo "find /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target/tmp/ -mindepth 1 -prune -print0 | xargs -0r rm -rf --" >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   \n' >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   \n' >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+printf '   	rm -f /workspaces/home/buildroot/output/images/rootfs.ext2\n	/workspaces/home/buildroot/output/host/sbin/mkfs.ext4 -d /workspaces/home/buildroot/output/build/buildroot-fs/ext2/target -N 0 -m 5 -L "rootfs" -I 256 -O ^64bit /workspaces/home/buildroot/output/images/rootfs.ext2 "60M" || { ret=$?; echo "*** Maybe you need to increase the filesystem size (BR2_TARGET_ROOTFS_EXT2_SIZE)" 1>&2; exit $ret; }\n' >> /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+chmod a+x /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+PATH="/workspaces/home/buildroot/output/host/bin:/workspaces/home/buildroot/output/host/sbin:/usr/local/rvm/gems/ruby-3.4.7/bin:/usr/local/rvm/gems/ruby-3.4.7@global/bin:/usr/local/rvm/rubies/ruby-3.4.7/bin:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/debugCommand:/home/codespace/.vscode-remote/data/User/globalStorage/github.copilot-chat/copilotCli:/vscode/bin/linux-x64/41dd792b5e652393e7787322889ed5fdc58bd75b/bin/remote-cli:/home/codespace/.local/bin:/home/codespace/.dotnet:/home/codespace/nvm/current/bin:/home/codespace/.php/current/bin:/home/codespace/.python/current/bin:/home/codespace/java/current/bin:/home/codespace/.ruby/current/bin:/home/codespace/.local/bin:/usr/local/python/current/bin:/usr/local/py-utils/bin:/usr/local/jupyter:/usr/local/oryx:/usr/local/go/bin:/go/bin:/usr/local/sdkman/bin:/usr/local/sdkman/candidates/java/current/bin:/usr/local/sdkman/candidates/gradle/current/bin:/usr/local/sdkman/candidates/maven/current/bin:/usr/local/sdkman/candidates/ant/current/bin:/usr/local/rvm/gems/default/bin:/usr/local/rvm/gems/default@global/bin:/usr/local/rvm/rubies/default/bin:/usr/local/share/rbenv/bin:/usr/local/php/current/bin:/opt/conda/bin:/usr/local/nvs:/usr/local/share/nvm/versions/node/v24.11.1/bin:/usr/local/hugo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/share/dotnet:/home/codespace/.dotnet/tools:/usr/local/rvm/bin" FAKEROOTDONTTRYCHOWN=1 /workspaces/home/buildroot/output/host/bin/fakeroot -- /workspaces/home/buildroot/output/build/buildroot-fs/ext2/fakeroot
+rootdir=/workspaces/home/buildroot/output/build/buildroot-fs/ext2/target
+table='/workspaces/home/buildroot/output/build/buildroot-fs/full_devices_table.txt'
+mke2fs 1.47.4 (6-Mar-2025)
+Creating regular file /workspaces/home/buildroot/output/images/rootfs.ext2
+64-bit filesystem support is not enabled.  The larger fields afforded by this feature enable full-strength checksumming.  Pass -O 64bit to rectify.
+Creating filesystem with 61440 1k blocks and 15360 inodes
+Filesystem UUID: ac985a8b-a77a-472e-945f-1ebf40c9b710
+Superblock backups stored on blocks: 
+	8193, 24577, 40961, 57345
+
+Allocating group tables: 0/8   done                            
+Writing inode tables: 0/8   done                            
+Creating journal (4096 blocks): done
+Copying files into the device: done
+Writing superblocks and filesystem accounting information: 0/8   done
+
+ln -sf rootfs.ext2 /workspaces/home/buildroot/output/images/rootfs.ext4
+[7m>>>   Executing post-image script board/qemu/post-image.sh[27m

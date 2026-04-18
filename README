@@ -56,6 +56,10 @@ make -j4
 Username: root
 Password: (none - just press Enter)
 
+#Enter Root Prompt
+
+Type 'root' to enter into the OS root prompt
+
 #Verify Real-Time
 
 # Inside RoboOS

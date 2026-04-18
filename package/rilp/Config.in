@@ -1,0 +1,6 @@
+config BR2_PACKAGE_RILP
+    bool "rilp"
+    help
+      RoboOS Inter-Layer Protocol (RILP)
+      
+      Unified inter-layer communication protocol for RoboOS.
