@@ -1,6 +1,6 @@
 #
 # Automatically generated file; DO NOT EDIT.
-# Buildroot -gdb0432a0e2-dirty Configuration
+# Buildroot -ga4546035f1-dirty Configuration
 #
 BR2_HAVE_DOT_CONFIG=y
 BR2_HOST_GCC_AT_LEAST_4_9=y
@@ -1003,6 +1003,7 @@ BR2_PACKAGE_QT6_ARCH_SUPPORTS=y
 #
 # Hardware handling
 #
+BR2_PACKAGE_ROBOOS_HAL=y
 
 #
 # Firmware

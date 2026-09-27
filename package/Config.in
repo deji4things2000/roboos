@@ -427,6 +427,7 @@ comment "X window managers"
 endmenu
 
 menu "Hardware handling"
+source "package/roboos-hal/Config.in"
 menu "Firmware"
 	source "package/am33x-cm3/Config.in"
 	source "package/armbian-firmware/Config.in"
@@ -1814,6 +1815,7 @@ menu "Graphics"
 endmenu
 
 menu "Hardware handling"
+source "package/roboos-hal/Config.in"
 	source "package/acsccid/Config.in"
 	source "package/bcm2835/Config.in"
 	source "package/c-periphery/Config.in"

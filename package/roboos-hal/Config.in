@@ -1,0 +1,5 @@
+config BR2_PACKAGE_ROBOOS_HAL
+    bool "roboos-hal"
+    help
+      RoboOS Hardware Abstraction Layer for PiCar-X.
+      Provides motor control via I2C to the Robot HAT.
